@@ -10,6 +10,9 @@ class Node{
     Node(int value){}        
 };
 
+Node::Node(int value){
+    value = value;
+}
 
 class LinkedList{
     public:
@@ -19,19 +22,21 @@ class LinkedList{
     
     private:
     int* head;
+
+    LinkedList(){};
 };
 
+LinkedList::LinkedList(){
 
-Node::Node(int value){
-    value = value;
-}
-
+};
 
 void LinkedList::append(int value){
-    Node* ptr = new Node(value);
-    *ptr = value;
-
+    Node* N = new Node(value);
+    N->next = 
 }
+
+
+
 
 
 
