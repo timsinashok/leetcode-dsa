@@ -32,7 +32,8 @@ LinkedList::LinkedList(){
 
 void LinkedList::append(int value){
     Node* N = new Node(value);
-    N->next = 
+    N->next = NULL;
+    num_items++;
 }
 
 
