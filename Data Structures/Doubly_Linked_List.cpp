@@ -1,25 +1,46 @@
 #include <iostream>
 
+
+using namespace std;
+
+// Forward declaration to resolve issue with redefinition
+template <typename T>
+class LinkedList;
+
+
+// Node Class
+template <typename T>
 class Node{
     private:
-        int value;
-        int* next;
-        int* previous;
+        T value;
+        Node<T>* next;
+        Node<T>* prev;
+        friend class LinkedList<T>;
     public:
-        Node(int value){
-            value = value;
-        };
+        Node(T value);        
 };
 
+template <typename T> Node<T>::Node(T value){
+    this -> value = value;
+}
 
-class Doubly_Linked_List{
+
+template <typename T>
+class LinkedList{
     private:
-        int num_values;
+        int size;
+        Node<T>* head;
     public:
-    void append(int value){};
+        LinkedList();
+        
 };
 
+template <typename T> LinkedList<T>::LinkedList(){
+    head = NULL;
+};
 
 int main(){
+
+    Node <int> a(5);
     return 0;
 }
