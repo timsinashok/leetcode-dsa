@@ -24,6 +24,8 @@ template <typename T> Node<T>::Node(T value){
 }
 
 
+
+// Class Linked List
 template <typename T>
 class LinkedList{
     private:
@@ -31,12 +33,21 @@ class LinkedList{
         Node<T>* head;
     public:
         LinkedList();
+        void addFront(Node<T>* n);
         
 };
 
 template <typename T> LinkedList<T>::LinkedList(){
     head = NULL;
 };
+
+
+template <typename T>  void LinkedList<T>::addFront(Node<T>* n){
+    n->next = head;
+    this->head = n;
+}
+
+
 
 int main(){
 
