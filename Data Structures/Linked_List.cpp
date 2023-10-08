@@ -8,7 +8,10 @@ template <typename T>
 class LinkedList;
 
 
+
+
 // Node Class
+
 template <typename T>
 class Node{
     private:
@@ -23,9 +26,12 @@ template <typename T> Node<T>::Node(T value){
     this -> value = value;
 }
 
+// Finished Node Class Definition
 
 
-// Class Linked List
+
+
+// Class Linked List ////
 template <typename T>
 class LinkedList{
     private:
@@ -33,7 +39,8 @@ class LinkedList{
         Node<T>* head;
     public:
         LinkedList();
-        void addFront(Node<T>* n);
+        void addFront(T val);
+        int getSize();
         
 };
 
@@ -42,11 +49,17 @@ template <typename T> LinkedList<T>::LinkedList(){
 };
 
 
-template <typename T>  void LinkedList<T>::addFront(Node<T>* n){
+template <typename T>  void LinkedList<T>::addFront(T val){
+    Node<T>* N = val;
     n->next = head;
     this->head = n;
 }
 
+template <typename T> int LinkedList<T>::getSize(){
+    return size;
+}
+
+/// Finished Linked List Class Definition ///
 
 
 int main(){
