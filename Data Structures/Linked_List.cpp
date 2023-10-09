@@ -38,7 +38,7 @@ class LinkedList{
         void addFront(T val);
         void removeFront();
         int getSize();
-        T front();
+        Node<T>& front();
         bool empty();
         
 };
@@ -72,7 +72,7 @@ template <typename T> int LinkedList<T>::getSize(){
     return size;
 }
 
-template <typename T> T LinkedList<T>::front(){
+template <typename T> Node<T>& LinkedList<T>::front(){
     return head->value;
 }
 
